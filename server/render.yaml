@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: stockpredict-ai-backend
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: FRONTEND_URL
+        value: https://your-app.vercel.app   # UPDATE after Vercel deploy
+    healthCheckPath: /api/stocks
