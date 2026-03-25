@@ -7,8 +7,11 @@ const PORT    = process.env.PORT || 5000
 
 // CORS — open to all origins (safe for a read-only public analytics API)
 app.use(cors({
-  origin: '*',
-  methods: ['GET'],
+  origin: [
+    'http://localhost:5173',
+    'https://your-vercel-app.vercel.app',  
+    /\.vercel\.app$/                        
+  ]
 }))
 app.use(express.json())
 
