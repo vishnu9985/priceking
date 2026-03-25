@@ -9,5 +9,5 @@ services:
       - key: NODE_VERSION
         value: 20
       - key: FRONTEND_URL
-        value: https://your-app.vercel.app   # UPDATE after Vercel deploy
+        value: https://priceking.vercel.app  # UPDATE after Vercel deploy
     healthCheckPath: /api/stocks
